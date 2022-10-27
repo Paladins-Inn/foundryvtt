@@ -36,7 +36,7 @@ or
 
 ```bash
 $ helm install my-release \
-    --set foundryvtt.adminKey='MyPa$$word' \
+    --set foundryvtt.adminPassword='MyPa$$word' \
     --set foundryvtt.username='my-foundry-website-user' \
     --set foundryvtt.password='my-foundry-website-user-pass' \
     ./incubator/foundry-vtt
@@ -72,7 +72,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 ```bash
 $ helm install my-release \
-    --set foundryvtt.adminKey='MyPa$$word' \
+    --set foundryvtt.adminPassword='MyPa$$word' \
     ./incubator/foundry-vtt
 ```
 
@@ -142,7 +142,7 @@ distribution's name must be of the form: `foundryvtt-0.7.10.zip`
 
 | Parameter                    | Description                                                                                                                                                                                                                                                                                                                             | Default            |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| foundryvtt.adminKey          | Admin password to be applied at startup. If omitted the admin password will be cleared.                                                                                                                                                                                                                                                 | admin              |
+| foundryvtt.adminPassword     | Admin password to be applied at startup. If omitted the admin password will be cleared.                                                                                                                                                                                                                                                 | admin              |
 | foundryvtt.hostname          | A custom hostname to use in place of the host machine's public IP address when displaying the address of the game session. This allows for reverse proxies or DNS servers to modify the public address.                                                                                                                                 | foundry.domain.com |
 | foundryvtt.language          | The default application language and module which provides the core translation files.                                                                                                                                                                                                                                                  | `en.core`          |
 | foundryvtt.license_key       | The license key to install. e.g.; AAAA-BBBB-CCCC-DDDD-EEEE-FFFF If left unset, a license key will be fetched when using account authentication. If multiple license keys are associated with an account, one will be chosen at random. Specific licenses can be selected by passing in an integer index. The first license key being 1. |
